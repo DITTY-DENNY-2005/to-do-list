@@ -1,31 +1,32 @@
---Todo Calendar Application
-
+Todo Calendar Application
+---
 A full-stack Todo Calendar web application built using Django, SQLite, and modern HTML, CSS, and JavaScript.
 This project allows users to manage tasks efficiently by selecting dates from a dynamic calendar and assigning priorities and time slots to each task.
 
 🚀 Features
-
+--
 Interactive 12-Month Calendar (2026)
 Month-wise navigation (January to December)
 Date selection directly from the calendar
 
 📝 Task Management
-
+--
 Add tasks with title, time, and priority
 Priority levels: High, Medium, Low
 Delete completed or expired tasks
 
 💾 Persistent Storage
-
+--
 All tasks are stored in SQLite database
 
 🧭 Clean UI Layout
+--
 Top navigation bar
 Left panel: Large calendar view
 Right panel: Task creation and task list
 
 ⚡ Backend + Frontend Integration
-
+--
 Django handles routing, views, and database
 Frontend communicates seamlessly with backend
 
@@ -38,6 +39,8 @@ IDE	Visual Studio Code
 Language	Python 3
 
 📂 Project Structure
+--
+
 todo_calendar/
 │
 ├── tasks/
@@ -66,6 +69,7 @@ todo_calendar/
 └── README.md
 
 ⚙️ Setup & Installation
+---
 1️. Clone the repository
 git clone <your-github-repo-url>
 cd todo_calendar
@@ -88,13 +92,13 @@ python manage.py runserver
 http://127.0.0.1:8000/
 
 📸 UI Overview
-
+---
 Top Bar: Application title (Todo Calendar)
 Left Panel: Large monthly calendar with navigation
 Right Panel: Task input form and task list
 
 🔮 Future Enhancements
-
+---
 User authentication (per-user tasks)
 Highlight calendar dates with tasks
 Disable past dates
@@ -103,7 +107,7 @@ REST API integration
 Mobile-responsive UI
 
 📌 Use Case
-
+---
 This project is ideal for:
 Learning Django full-stack development
 Demonstrating frontend–backend integration
