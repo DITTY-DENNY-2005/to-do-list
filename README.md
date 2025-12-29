@@ -43,19 +43,24 @@ todo_calendar/
 ├── tasks/
 │   ├── migrations/
 │   ├── templates/
-│   │   └── tasks/
+│   │  
+└── tasks/
 │   │       └── index.html
-│   ├── static/
+│   
+├── static/
 │   │   ├── style.css
 │   │   └── calendar.js
-│   ├── models.py
+│   
+├── models.py
 │   ├── views.py
 │   ├── urls.py
 │
+
 ├── todo_calendar/
 │   ├── settings.py
 │   ├── urls.py
 │
+
 ├── db.sqlite3
 ├── manage.py
 └── README.md
