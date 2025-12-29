@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo Calendar</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- TOP TASKBAR -->
+<div class="topbar">
+    <div class="brand">Todo Calendar</div>
+</div>
+
+<div class="content"></div>
+<div class="page">
+
+    <!-- LEFT: BIG CALENDAR -->
+    <div class="left-panel">
+    <div class="calendar-header">
+        <button id="prevMonth">◀</button>
+        <h2 id="monthTitle">January 2026</h2>
+        <button id="nextMonth">▶</button>
+    </div>
+
+    <div class="weekdays">
+        <span>Sun</span><span>Mon</span><span>Tue</span>
+        <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+    </div>
+
+    <div id="calendar"></div>
+</div>
+
+
+    <!-- RIGHT: TASK FORM -->
+    <div class="right-panel">
+        <h2>Add Task</h2>
+
+        <form method="POST" action="/add/" class="task-form">
+            {% csrf_token %}
+
+            <!-- Hidden date (filled from calendar) -->
+            <input type="hidden" name="date" id="selectedDate" required>
+
+            <input type="text" name="title" placeholder="Task name" required>
+            <input type="time" name="time" required>
+
+            <select name="priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+        </form>
+
+        <h2>Tasks</h2>
+
+        {% for task in tasks %}
+        <div class="task {{ task.priority }}">
+            <div>
+                <strong>{{ task.title }}</strong><br>
+                {{ task.date }} | {{ task.time }} | {{ task.priority }}
+            </div>
+            <a href="/delete/{{ task.id }}/" class="delete">✖</a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+<script src="/static/calendar.js"></script>
+</div>
+
+
+</body>
+
+</html>
